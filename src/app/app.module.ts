@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { StoryComponent } from './story/story.component';
 import { GlobeComponent } from './globe/globe.component';
 import { CloudComponent } from './cloud/cloud.component';
+import { RendererComponent } from './renderer/renderer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StoryComponent,
     GlobeComponent,
-    CloudComponent
+    CloudComponent,
+    RendererComponent
   ],
   imports: [
     BrowserModule,
