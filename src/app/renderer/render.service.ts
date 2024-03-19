@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { ElementRef, Injectable, NgZone, OnDestroy } from '@angular/core';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { GLTF, GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 @Injectable({ providedIn: 'root' })
 export class RenderService implements OnDestroy {
@@ -35,6 +35,8 @@ export class RenderService implements OnDestroy {
             antialias: true
         });
         this.renderer.setSize(window.innerWidth, window.innerHeight);
+        this.renderer.shadowMap.enabled = true;
+        this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
         this.scene = new THREE.Scene();
 
@@ -44,9 +46,13 @@ export class RenderService implements OnDestroy {
         this.camera.position.z = 5;
         this.scene.add(this.camera);
 
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-        directionalLight.position.set(0, 0, 1);
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 2);
+        directionalLight.position.set(0, 1, 1);
         this.scene.add(directionalLight);
+
+        const directionalLight2 = new THREE.DirectionalLight(0xeeeeee, 1);
+        directionalLight.position.set(0, 0, 1);
+        this.scene.add(directionalLight2);
 
         this.light = new THREE.AmbientLight(0x000000);
         this.light.position.z = 10;
@@ -59,13 +65,6 @@ export class RenderService implements OnDestroy {
 
     public subscribeToAnimation(callback: () => void): void {
         this.animationSubscribers.push(callback);
-    }
-
-    public unsubscribeFromAnimation(callback: () => void): void {
-        const index = this.animationSubscribers.indexOf(callback);
-        if (index !== -1) {
-            this.animationSubscribers.splice(index, 1);
-        }
     }
 
     public animate(): void {
@@ -90,7 +89,6 @@ export class RenderService implements OnDestroy {
         this.frameId = requestAnimationFrame(() => {
             this.render();
             this.animationSubscribers.forEach(callback => callback());
-            console.log(this.animationSubscribers.length)
         });
 
         if (this.renderer)

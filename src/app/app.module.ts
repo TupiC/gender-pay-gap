@@ -7,6 +7,8 @@ import { StoryComponent } from './story/story.component';
 import { GlobeComponent } from './globe/globe.component';
 import { CloudComponent } from './cloud/cloud.component';
 import { RendererComponent } from './renderer/renderer.component';
+import { ChartComponent } from './chart/chart.component';
+import { HeroComponent } from './hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { RendererComponent } from './renderer/renderer.component';
     StoryComponent,
     GlobeComponent,
     CloudComponent,
-    RendererComponent
+    RendererComponent,
+    ChartComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
