@@ -9,6 +9,9 @@ import { CloudComponent } from './cloud/cloud.component';
 import { RendererComponent } from './renderer/renderer.component';
 import { ChartComponent } from './chart/chart.component';
 import { HeroComponent } from './hero/hero.component';
+import { CountUpModule } from 'ngx-countup';
+import { AngularFullpageModule } from '@fullpage/angular-fullpage';
+import { EuropeComponent } from './europe/europe.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +21,16 @@ import { HeroComponent } from './hero/hero.component';
     CloudComponent,
     RendererComponent,
     ChartComponent,
-    HeroComponent
+    HeroComponent,
+    EuropeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CountUpModule,
+    AngularFullpageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

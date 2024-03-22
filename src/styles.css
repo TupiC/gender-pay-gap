@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(~fullpage.js/dist/fullpage.min.css);
 
 html,head,body {
     margin: 0;
