@@ -18,7 +18,7 @@ export class TranslationService {
       chartDescription: "The gender pay gap in Austria is on a promising downward trend, with data from 2011 to 2022 showing a decrease from 23.5% to 18.4%. By calculating the regression of the current trend we can see that the gender pay gap could be closed by 2062. This is still a long way off, but it is a step in a better economical equality.",
       hideRegression: "Hide Regression",
       showRegression: "Show Regression",
-      europeText: "With a gender pay gap of 18.4%, Austria stands above the EU-27 average of12.7%. This statistic places Austria among the countries with higher gender pay disparities in the European Union.",
+      europeText: "With a gender pay gap of 18.4%, Austria stands above the EU-27 average of 12.7%. This statistic places Austria among the countries with higher gender pay disparities in the European Union.",
       aroundTheWorld: "Around The World",
       globeDescription: "The globe represents the Gender Gap Index across countries. Each nation is colored based on its progress towards gender equality. The darker the shade of blue, the closer the country is to achieving full gender equality.",
       indexDescription: "The Gender Gap Index is a metric that evaluates the disparity between men and women across various sectors such as economic participation, education, health, and political empowerment."
