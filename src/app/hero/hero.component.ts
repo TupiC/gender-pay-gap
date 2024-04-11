@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CountUp } from 'countup.js';
 import { CountUpOptions } from 'countup.js';
 import { TranslationService } from '../translation.service';
@@ -9,7 +9,6 @@ import { TranslationService } from '../translation.service';
 })
 export default class HeroComponent implements OnInit {
   options!: CountUpOptions;
-  currentLanguage: string = 'en';
 
   constructor(private translationService: TranslationService) { }
 
@@ -29,15 +28,15 @@ export default class HeroComponent implements OnInit {
     }, 3000);
   }
 
-  changeLanguage(lang: string) {
-    this.currentLanguage = lang;
-  }
-
   getTranslation(key: string): string {
-    return this.translationService.getTranslation(this.currentLanguage, key);
+    return this.translationService.getTranslation(key);
   }
 
-  isLanguageSelected(lang: string): boolean {
-    return this.currentLanguage === lang;
+  changeLanguage(lang: string) {
+    this.translationService.changeLanguage(lang);
+  }
+
+  isLanguageSelected(lang: string) {
+    return this.translationService.isLanguageSelected(lang);
   }
 }

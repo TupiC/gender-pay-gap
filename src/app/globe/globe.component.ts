@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import Globe from "globe.gl";
 import * as d3 from "d3";
+import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'app-globe',
@@ -8,6 +9,9 @@ import * as d3 from "d3";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GlobeComponent implements OnInit {
+
+  constructor(private translationService: TranslationService) { }
+
   ngOnInit() {
     const globeElement = document.getElementById("globeViz")
     if (!globeElement) {
@@ -71,5 +75,9 @@ export class GlobeComponent implements OnInit {
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  getTranslation(key: string): string {
+    return this.translationService.getTranslation(key);
   }
 }
