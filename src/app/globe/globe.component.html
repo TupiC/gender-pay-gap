@@ -1,1 +1,29 @@
 <div id="globeViz"></div>
+<h2
+  class="absolute top-8 w-96 text-4xl bg-black text-white rounded-lg p-4 text-center"
+>
+  Gender Gap Index<br />Across The Globe
+</h2>
+<div class="absolute left-8 w-96 text-xl bg-black text-white rounded-lg p-4">
+  <p>
+    The globe represents the Gender Gap Index across countries. Each nation is
+    colored based on its progress towards gender equality. The darker the shade
+    of blue, the closer the country is to achieving full gender equality.
+  </p>
+</div>
+<div
+  class="absolute right-8 w-96 text-xl bg-black text-white rounded-lg p-4 text-right"
+>
+  <p>
+    The Gender Gap Index is a metric that evaluates the disparity between men
+    and women across various sectors such as economic participation, education,
+    health, and political empowerment.
+  </p>
+</div>
+<!-- icon on bottom right corner which scrolls to the top of the page -->
+<div
+  class="absolute bottom-8 right-8 w-16 h-16 bg-black text-white rounded-full flex justify-center items-center cursor-pointer"
+  (click)="scrollToTop()"
+>
+  <i class="fas fa-arrow-up"></i>
+</div>
