@@ -1,4 +1,25 @@
 <div
+  class="absolute top-8 right-8 flex gap-4 align-center bg-[#141414] p-4 rounded-lg"
+>
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/0/0b/English_language.svg"
+    alt="english language flag"
+    id="english"
+    class="h-6 rounded-sm hover:scale-105 duration-100 outline"
+    [ngClass]="{ 'outline-2 outline-white': isLanguageSelected('en') }"
+    (click)="changeLanguage('en')"
+  />
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg"
+    alt="german language flag"
+    id="german"
+    class="h-6 rounded-sm hover:scale-105 duration-100 outline"
+    [ngClass]="{ 'outline-2 outline-white': isLanguageSelected('de') }"
+    (click)="changeLanguage('de')"
+  />
+</div>
+
+<div
   class="h-[100dvh] w-full flex flex-col justify-center items-center font-bold text-[#fff]"
 >
   <div>
@@ -8,7 +29,7 @@
       data-aos-duration="2000"
       class="relative top-[-20px] text-5xl text-center [text-shadow:_0_0_20px_rgb(0_0_0_/_100%)]"
     >
-      Gender Equality Matters
+      {{ getTranslation("genderEquality") }}
     </div>
     <div
       data-aos="fade-up"
@@ -16,8 +37,9 @@
       data-aos-duration="2000"
       class="text-2xl text-gray-300 text-center [text-shadow:_0_0_20px_rgb(0_0_0_/_100%)]"
     >
-      In Austria
-      <span class="text-pink-300">women</span> earn grossly
+      In {{ getTranslation("austria") }}
+      <span class="text-pink-300">{{ getTranslation("women") }}</span>
+      {{ getTranslation("earnGrossly") }}
       <span
         class="text-red-400 font-extrabold"
         id="myTargetElement"
@@ -25,7 +47,9 @@
         [options]="options"
         >0.0%</span
       >
-      less per hour than <span class="text-blue-400">men</span>.
+      {{ getTranslation("lessPerHourThan") }}
+      <span class="text-blue-400">{{ getTranslation("men") }}</span
+      >.
     </div>
   </div>
 </div>

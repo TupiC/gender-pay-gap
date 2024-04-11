@@ -8,7 +8,7 @@ import { GlobeComponent } from './globe/globe.component';
 import { CloudComponent } from './cloud/cloud.component';
 import { RendererComponent } from './renderer/renderer.component';
 import { ChartComponent } from './chart/chart.component';
-import { HeroComponent } from './hero/hero.component';
+import HeroComponent from './hero/hero.component';
 import { CountUpModule } from 'ngx-countup';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 import { EuropeComponent } from './europe/europe.component';
