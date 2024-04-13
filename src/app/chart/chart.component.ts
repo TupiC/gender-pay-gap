@@ -32,7 +32,7 @@ export class ChartComponent implements OnInit {
             cubicInterpolationMode: 'default'
           },
           {
-            label: 'Expected Gender Pay Gap Closure',
+            label: this.getTranslation('expectedGenderPayGapClosure'),
             data: this.extendedRegressionData,
             fill: false,
             hidden: true,
@@ -46,7 +46,7 @@ export class ChartComponent implements OnInit {
           legend: {
             onClick: (e: ChartEvent, legendItem: LegendItem, legend: any) => {
               console.log(legendItem)
-              if (legendItem.text === "Expected Gender Pay Gap Closure") {
+              if (legendItem.text === this.getTranslation('expectedGenderPayGapClosure')) {
                 this.toggleExtendedData()
               }
             }
@@ -59,7 +59,7 @@ export class ChartComponent implements OnInit {
             display: true,
             title: {
               display: true,
-              text: 'Year',
+              text: this.getTranslation('year'),
               color: 'white'
             },
             ticks: { color: 'white' }
@@ -68,7 +68,7 @@ export class ChartComponent implements OnInit {
             display: true,
             title: {
               display: true,
-              text: 'Percent',
+              text: this.getTranslation('percent'),
               color: 'white'
             },
             ticks: { color: 'white' }
@@ -89,5 +89,4 @@ export class ChartComponent implements OnInit {
   getTranslation(key: string): string {
     return this.translationService.getTranslation(key);
   }
-
 }

@@ -21,10 +21,15 @@ export class TranslationService {
       europeText: "With a gender pay gap of 18.4%, Austria stands above the EU-27 average of 12.7%. This statistic places Austria among the countries with higher gender pay disparities in the European Union.",
       aroundTheWorld: "Around The World",
       globeDescription: "The globe represents the Gender Gap Index across countries. Each nation is colored based on its progress towards gender equality. The darker the shade of blue, the closer the country is to achieving full gender equality.",
-      indexDescription: "The Gender Gap Index is a metric that evaluates the disparity between men and women across various sectors such as economic participation, education, health, and political empowerment."
+      indexDescription: "The Gender Gap Index is a metric that evaluates the disparity between men and women across various sectors such as economic participation, education, health, and political empowerment.",
+      expectedGenderPayGapClosure: "Expected Gender Pay Gap Closure",
+      year: "Year",
+      percent: "Percent",
+      country: "Country",
+      projectBy: "Project by",
     },
     de: {
-      genderEquality: "Gender Equality Matters",
+      genderEquality: "Geschlechtergleichheit ist wichtig",
       austria: "Österreich verdienen",
       women: "Frauen",
       earnGrossly: "brutto um",
@@ -37,7 +42,12 @@ export class TranslationService {
       europeText: "Mit einem Gender Pay Gap von 18,4% liegt Österreich über dem EU-27-Durchschnitt von 12,7%. Diese Statistik platziert Österreich unter den Ländern mit höheren geschlechtsspezifischen Lohnunterschieden in der Europäischen Union.",
       aroundTheWorld: "Rund um die Welt",
       globeDescription: "Der Globus repräsentiert den Gender Gap Index in verschiedenen Ländern. Jede Nation ist basierend auf ihrem Fortschritt in Richtung Geschlechtergleichstellung eingefärbt. Je dunkler der Blauton, desto näher ist das Land an der vollständigen Geschlechtergleichstellung.",
-      indexDescription: "Der Gender Gap Index ist eine Metrik, die die Abweichung zwischen Männern und Frauen in verschiedenen Bereichen wie wirtschaftlicher Teilhabe, Bildung, Gesundheit und politischer Beteiligung bewertet."
+      indexDescription: "Der Gender Gap Index ist eine Metrik, die die Abweichung zwischen Männern und Frauen in verschiedenen Bereichen wie wirtschaftlicher Teilhabe, Bildung, Gesundheit und politischer Beteiligung bewertet.",
+      expectedGenderPayGapClosure: "Erwarteter Gender Pay Gap-Schluss",
+      year: "Jahr",
+      percent: "Prozent",
+      country: "Land",
+      projectBy: "Projekt von",
     },
   };
 

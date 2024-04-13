@@ -34,7 +34,7 @@ export class EuropeComponent implements OnInit {
             display: true,
             title: {
               display: true,
-              text: 'Country',
+              text: this.getTranslation('country'),
               color: 'white'
             },
             ticks: {
@@ -46,7 +46,7 @@ export class EuropeComponent implements OnInit {
             display: true,
             title: {
               display: true,
-              text: 'Percent',
+              text: this.getTranslation('percent'),
               color: 'white'
             },
             ticks: { color: 'white' }
