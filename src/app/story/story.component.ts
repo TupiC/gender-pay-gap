@@ -7,8 +7,16 @@ import { TranslationService } from '../translation.service';
 })
 export class StoryComponent {
   currentLanguage = this.translationService.currentLanguage
+  isMobile = window.innerWidth < 1024;
 
   constructor(private translationService: TranslationService) { }
+
+  ngOnInit() {
+    window.addEventListener('resize', () => {
+      this.isMobile = window.innerWidth < 1024;
+    }
+    );
+  }
 
   getTranslation(key: string): string {
     return this.translationService.getTranslation(key);

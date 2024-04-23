@@ -1,4 +1,15 @@
-<div class="snap-mandatory snap-y relative overflow-x-hidden">
+<div *ngIf="isMobile">
+  <div class="flex justify-center items-center h-[100dvh]">
+    <div class="text-center">
+      <h1 class="text-3xl font-bold">Mobile Not Supported</h1>
+      <p class="text-lg">
+        Sorry, this app is not optimized for mobile devices. Please use a device
+        with a larger screen.
+      </p>
+    </div>
+  </div>
+</div>
+<div *ngIf="!isMobile" class="snap-mandatory snap-y relative overflow-x-hidden">
   <app-renderer class="absolute"></app-renderer>
   <app-hero class="snap-center"></app-hero>
   <app-chart class="snap-center"></app-chart>
